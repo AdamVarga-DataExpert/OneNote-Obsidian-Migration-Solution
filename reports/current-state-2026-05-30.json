@@ -1,0 +1,124 @@
+{
+  "created_local": "2026-05-30T22:47:04",
+  "project_root": "C:\\Users\\<user>\\Documents\\OneNote-Obsidian-Migration-Solution",
+  "staging_root": "C:\\Users\\<user>\\Documents\\OneNote-Migration-Staging-v2",
+  "source_artifacts": {
+    "exporter": "C:\\Users\\<user>\\AppData\\Local\\hermes\\hermes-agent\\tmp_migrate_onenote_assets.py",
+    "verifier": "C:\\Users\\<user>\\AppData\\Local\\hermes\\hermes-agent\\verify_onenote_graph_export.py",
+    "manifest": "C:\\Users\\<user>\\Documents\\OneNote-Migration-Staging-v2\\_manifest.json",
+    "repair_manifest": "C:\\Users\\<user>\\Documents\\OneNote-Migration-Staging-v2\\_image_render_repair_manifest.json"
+  },
+  "manifest_records": 367,
+  "manifest_status_counts": {
+    "success": 363,
+    "failed_fetch": 3,
+    "failed_section_pages": 1
+  },
+  "manifest_notebook_counts": {
+    "1 Projects": 66,
+    "2 Areas": 74,
+    "3 Resources": 90,
+    "4 Archive": 86,
+    "Personal legacy notebook": 8,
+    "Additional private notebook A": 1,
+    "Additional private notebook B": 1,
+    "Private legacy notebook": 41
+  },
+  "manifest_paths": {
+    "with_path": 366,
+    "existing_files": 315,
+    "missing_files": 51
+  },
+  "manifest_missing_by_notebook": {
+    "Personal legacy notebook": 8,
+    "Additional private notebook A": 1,
+    "Additional private notebook B": 1,
+    "Private legacy notebook": 41
+  },
+  "manifest_non_success": [
+    {
+      "notebook": "1 Projects",
+      "section": "Sengoku Jidai",
+      "title": "Possible issues",
+      "status": "failed_fetch",
+      "error_class": "graph_504_or_other"
+    },
+    {
+      "notebook": "3 Resources",
+      "section": "Cooking",
+      "title": "Fried rice",
+      "status": "failed_fetch",
+      "error_class": "graph_504_or_other"
+    },
+    {
+      "notebook": "3 Resources",
+      "section": "Cooking",
+      "title": "Sauces",
+      "status": "failed_fetch",
+      "error_class": "graph_504_or_other"
+    },
+    {
+      "notebook": "3 Resources",
+      "section": "Encrypted private section",
+      "title": null,
+      "status": "failed_section_pages",
+      "error_class": "encrypted_section"
+    }
+  ],
+  "pages_with_assets_metadata": 133,
+  "asset_failure_count": 0,
+  "image_render_repair": {
+    "created_utc": "2026-05-30T20:04:32Z",
+    "reason": "Repair Markdown image syntax that Obsidian renders as code blocks because OneNote indentation tabs preceded ![] links; collapse multiline alt text.",
+    "before": {
+      "files_with_images": 133,
+      "refs": 645,
+      "indented": 643,
+      "multiline_alt": 129
+    },
+    "after": {
+      "files_with_images": 133,
+      "refs": 645,
+      "indented": 0,
+      "multiline_alt": 0
+    },
+    "changed_file_count": 133
+  },
+  "filesystem_scan": {
+    "markdown_files": 315,
+    "image_files_by_extension": 596,
+    "top_level_markdown_counts": {
+      "1 Projects": 66,
+      "2 Areas": 74,
+      "3 Resources": 89,
+      "4 Archive": 86
+    }
+  },
+  "latest_verifier_exit_code": 1,
+  "latest_verifier_summary": {
+    "target": "C:\\Users\\<user>\\Documents\\OneNote-Migration-Staging-v2",
+    "markdown_count": 315,
+    "index_md_count": 0,
+    "visible_assets_dirs": 25,
+    "hidden_assets_dirs": 0,
+    "markdown_image_embeds": 591,
+    "render_blocking_image_refs_count": 0,
+    "render_blocking_image_ref_samples": [],
+    "broken_local_refs": [],
+    "remote_graph_urls": [
+      "<redacted note path with remaining remote Graph URL #1>",
+      "<redacted note path with remaining remote Graph URL #2>",
+      "<redacted note path with remaining remote Graph URL #3>",
+      "<redacted note path with remaining remote Graph URL #4>",
+      "<redacted note path with remaining remote Graph URL #5>",
+      "<redacted note path with remaining remote Graph URL #6>",
+      "<redacted note path with remaining remote Graph URL #7>",
+      "<redacted note path with remaining remote Graph URL #8>",
+      "<redacted note path with remaining remote Graph URL #9>",
+      "<redacted note path with remaining remote Graph URL #10>"
+    ],
+    "invalid_signatures_for_referenced_images": [],
+    "manifest_failed_or_partial_count": 4
+  },
+  "privacy_note": "This public status snapshot has local paths and exact private note names redacted."
+}

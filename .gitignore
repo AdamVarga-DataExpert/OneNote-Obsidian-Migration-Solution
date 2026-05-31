@@ -1,0 +1,20 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Do not commit raw exports or auth material
+raw/
+exports/
+staging/
+*.one
+*_token.json
+*client_secret*.json
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
