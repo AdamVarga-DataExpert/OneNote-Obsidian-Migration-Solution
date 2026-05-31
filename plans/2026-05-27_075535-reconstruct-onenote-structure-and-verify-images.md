@@ -11,7 +11,7 @@
 ---
 
 ## Current context / assumptions
-- The working vault is `C:\Users\<user>\Documents\Personal`.
+- The working vault is `C:\Users\<user>\Documents\<vault>`.
 - The source material should now be treated as OneNote MD Exporter output rather than a raw Microsoft Graph download.
 - OneNote MD Exporter is the authoritative basis for page ordering, folder nesting, subpage handling, and asset placement.
 - The vault already contains many migrated notes, folders, and local asset folders.
@@ -88,9 +88,9 @@
 - Reconcile the final vault state against the OneNote MD Exporter output one last time.
 
 ## Files likely to change
-- `C:\Users\<user>\Documents\Personal\**\*.md`
-- `C:\Users\<user>\Documents\Personal\**\.assets\*`
-- possibly `C:\Users\<user>\Documents\Personal\.obsidian\workspace.json` if a saved view is needed for validation
+- `C:\Users\<user>\Documents\<vault>\**\*.md`
+- `C:\Users\<user>\Documents\<vault>\**\.assets\*`
+- possibly `C:\Users\<user>\Documents\<vault>\.obsidian\workspace.json` if a saved view is needed for validation
 
 ## Validation / success criteria
 - `Map A Globe` and similar problem pages no longer appear as broken or empty shell pages.

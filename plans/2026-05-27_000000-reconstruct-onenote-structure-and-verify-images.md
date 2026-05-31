@@ -11,7 +11,7 @@ Restore the OneNote-derived Obsidian vault structure from the downloaded Graph e
 
 ## Current context / assumptions
 
-- The vault lives at `C:\Users\<user>\Documents\Personal`.
+- The vault lives at `C:\Users\<user>\Documents\<vault>`.
 - The OneNote export was previously downloaded from Microsoft Graph and partially transformed.
 - Some pages were renamed to title-based `.md` files.
 - Some page folders still exist alongside same-named markdown notes, which can create unnecessary duplication.
@@ -90,8 +90,8 @@ Restore the OneNote-derived Obsidian vault structure from the downloaded Graph e
 
 ## Files likely to change
 
-- `C:\Users\<user>\Documents\Personal\...` vault markdown notes
-- `C:\Users\<user>\Documents\Personal\...\.assets\...` image assets
+- `C:\Users\<user>\Documents\<vault>\...` vault markdown notes
+- `C:\Users\<user>\Documents\<vault>\...\.assets\...` image assets
 - possibly `.obsidian/workspace.json` only if view-state changes are needed for validation
 
 ## Tests / validation

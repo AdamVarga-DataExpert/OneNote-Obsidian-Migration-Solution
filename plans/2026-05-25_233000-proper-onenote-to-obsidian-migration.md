@@ -4,10 +4,10 @@
 Redo the OneNote migration properly so the Obsidian vault preserves the original OneNote hierarchy, including notebook/section/subpage organization, and includes local copies of images and other embedded assets.
 
 ## Current context / assumptions
-- The existing `C:\Users\<user>\Documents\Personal` vault contains an initial OneNote import, but it flattened hierarchy too aggressively and did not preserve images.
+- The existing `C:\Users\<user>\Documents\<vault>` vault contains an initial OneNote import, but it flattened hierarchy too aggressively and did not preserve images.
 - The current vault should be treated as a draft/reference, not the final migrated structure.
 - The user wants a faithful filesystem-native Obsidian migration, with local assets and preserved source metadata.
-- The destination vault remains `C:\Users\<user>\Documents\Personal` unless a better corrective layout is required during the repair pass.
+- The destination vault remains `C:\Users\<user>\Documents\<vault>` unless a better corrective layout is required during the repair pass.
 - Source metadata already exists in imported notes and should continue to be preserved.
 - The final output should be suitable for git-based sync.
 
@@ -90,7 +90,7 @@ Do a second, structural migration pass that is source-tree-first rather than tit
 
 ## Files likely to change
 - OneNote extraction / migration scripts under `C:\Users\<user>\AppData\Local\hermes\hermes-agent\` or `C:\Users\<user>\AppData\Local\hermes\scripts\`
-- The Obsidian vault at `C:\Users\<user>\Documents\Personal\...`
+- The Obsidian vault at `C:\Users\<user>\Documents\<vault>\...`
 - Migration status notes inside the vault
 - Staging manifest files and raw exports under a dedicated migration workspace
 - `.gitignore` and git metadata if staging paths need to be excluded
@@ -120,8 +120,8 @@ Do a second, structural migration pass that is source-tree-first rather than tit
 7. Re-run validation and commit the corrected vault.
 
 ## Precise handoff summary
-The repaired migration exists in the current `Personal` vault and has been pushed to GitHub, but the source OneNote model still needs a final cleanup pass if perfect fidelity is required. Current state:
-- The final vault is at `C:\Users\<user>\Documents\Personal`.
+The repaired migration exists in the current `<vault>` vault and has been pushed to GitHub, but the source OneNote model still needs a final cleanup pass if perfect fidelity is required. Current state:
+- The final vault is at `C:\Users\<user>\Documents\<vault>`.
 - The corrected migration is committed and pushed on `main`.
 - The export preserves the OneNote notebook/section/page hierarchy in nested folders.
 - Embedded assets were recovered into per-page `.assets` folders.

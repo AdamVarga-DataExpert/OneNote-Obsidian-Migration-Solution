@@ -75,17 +75,54 @@ python scripts/repair_markdown_image_rendering.py /c/Users/<user>/Documents/OneN
 
 Then run the verifier again.
 
-## 6. Manual Obsidian check
+## 6. Audit source-link preservation
+
+After image/layout verification passes, compare the migrated Markdown links with
+live OneNote HTML anchors. This catches cases where the visible text migrated but
+the actual URL was lost.
+
+```bash
+python scripts/audit_onenote_links.py /path/to/migrated-vault \
+  --auth-json /path/to/private/microsoft-graph-token.json
+```
+
+The audit writes reports under `<vault>/_audit/` by default. Those reports can
+contain private note titles, relative paths, OneNote page IDs, and source URLs;
+do not commit them to a public repository.
+
+Hard expectations:
+
+- `fetch_errors == 0`, unless throttled/encrypted/inaccessible pages are explicitly documented;
+- `notes_with_missing_external_links == 0` after repair;
+- URL query strings are preserved because they can contain YouTube IDs, timestamps, and other meaningful source details.
+
+## 7. Repair missing source links if needed
+
+If the audit finds missing or partial external links, repair from the audit JSON:
+
+```bash
+python scripts/repair_missing_onenote_links.py /path/to/migrated-vault
+python scripts/audit_onenote_links.py /path/to/migrated-vault \
+  --auth-json /path/to/private/microsoft-graph-token.json \
+  --report-stem onenote-link-verification-after-repair
+```
+
+The repair script backs up changed notes outside the vault by default, restores
+links inline when the original anchor context is clear, and otherwise adds a
+`## Source links` section.
+
+## 8. Manual Obsidian check
 
 Open representative notes in Obsidian Reading view, especially:
 
 - one image-heavy note, e.g. `Map ideas.md`;
 - one multi-image note;
 - one text-only note;
+- one page with restored source links;
 - one failed-fetch placeholder note.
 
-Acceptance requires the image to display inline after reload, not only the asset existing on disk.
+Acceptance requires the image to display inline after reload, not only the asset existing on disk. Source links must remain clickable in Reading view.
 
-## 7. Promote or sync
+## 9. Promote or sync
 
-Only promote into the final Obsidian vault or commit to a sync repo after automated verification and representative Obsidian rendering checks pass.
+Only promote into the final Obsidian vault or commit to a sync repo after automated verification, source-link audit, and representative Obsidian rendering checks pass.

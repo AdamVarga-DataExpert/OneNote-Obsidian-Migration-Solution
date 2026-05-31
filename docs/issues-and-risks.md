@@ -6,9 +6,8 @@
 
 Three pages are represented as failed-fetch placeholders due to Graph 504 errors:
 
-- `1 Projects / Sengoku Jidai / Possible issues`
-- `3 Resources / Cooking / Fried rice`
-- `3 Resources / Cooking / Sauces`
+- one project note
+- two resource notes
 
 These should be retried from the manifest. Do not reconstruct or summarize their content by guessing.
 
@@ -29,7 +28,7 @@ The latest verifier reported remote Graph URL occurrences in 10 Markdown files. 
 
 The manifest contains 367 records and 366 path-bearing page entries, but only 315 Markdown files currently exist in the visible staging tree. Missing manifest paths are concentrated in non-PARA notebooks:
 
-- `Personal legacy notebook`: 8
+- `Primary legacy notebook`: 8
 - `Additional private notebook A`: 1
 - `Additional private notebook B`: 1
 - `Private legacy notebook`: 41

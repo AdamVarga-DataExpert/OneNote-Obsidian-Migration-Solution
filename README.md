@@ -9,6 +9,8 @@ It is intentionally a documentation and handoff project, not a dump of the notes
 - Staging vault: `C:/Users/<user>/Documents/OneNote-Migration-Staging-v2`
 - Exporter reference script: `scripts/reference_hermes_graph_exporter.py`
 - Verifier script: `scripts/verify_onenote_graph_export.py`
+- Link preservation audit script: `scripts/audit_onenote_links.py`
+- Missing-link repair script: `scripts/repair_missing_onenote_links.py`
 - Status report: `reports/current-state-2026-05-30.json`
 
 ## Solution in one paragraph
@@ -36,8 +38,10 @@ Do not treat a file existing on disk as proof of a successful migration. A note 
 3. every intended image has a local Markdown reference;
 4. every local image reference resolves from the note folder;
 5. the target bytes are a real image format;
-6. the image Markdown is renderable in Obsidian, not indented as a code block;
-7. missing, encrypted, throttled, or failed pages are documented rather than guessed.
+6. external source URLs from OneNote anchors are preserved as Markdown links, including query strings for video IDs, timestamps, and campaign/source URLs;
+7. ambiguous restored URLs are visible under a `## Source links` section rather than silently dropped;
+8. the image Markdown is renderable in Obsidian, not indented as a code block;
+9. missing, encrypted, throttled, or failed pages are documented rather than guessed.
 
 ## Latest known status
 

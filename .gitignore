@@ -4,10 +4,11 @@ Thumbs.db
 *.tmp
 *.log
 
-# Do not commit raw exports or auth material
+# Do not commit raw exports, generated audits, or auth material
 raw/
 exports/
 staging/
+_audit/
 *.one
 *_token.json
 *client_secret*.json

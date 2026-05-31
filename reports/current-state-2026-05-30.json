@@ -19,7 +19,7 @@
     "2 Areas": 74,
     "3 Resources": 90,
     "4 Archive": 86,
-    "Personal legacy notebook": 8,
+    "Primary legacy notebook": 8,
     "Additional private notebook A": 1,
     "Additional private notebook B": 1,
     "Private legacy notebook": 41
@@ -30,35 +30,35 @@
     "missing_files": 51
   },
   "manifest_missing_by_notebook": {
-    "Personal legacy notebook": 8,
+    "Primary legacy notebook": 8,
     "Additional private notebook A": 1,
     "Additional private notebook B": 1,
     "Private legacy notebook": 41
   },
   "manifest_non_success": [
     {
-      "notebook": "1 Projects",
-      "section": "Sengoku Jidai",
-      "title": "Possible issues",
+      "notebook": "<project-notebook>",
+      "section": "<project-section>",
+      "title": "<project-note>",
       "status": "failed_fetch",
       "error_class": "graph_504_or_other"
     },
     {
-      "notebook": "3 Resources",
-      "section": "Cooking",
-      "title": "Fried rice",
+      "notebook": "<resource-notebook>",
+      "section": "<resource-section>",
+      "title": "<resource-note-1>",
       "status": "failed_fetch",
       "error_class": "graph_504_or_other"
     },
     {
-      "notebook": "3 Resources",
-      "section": "Cooking",
-      "title": "Sauces",
+      "notebook": "<resource-notebook>",
+      "section": "<resource-section>",
+      "title": "<resource-note-2>",
       "status": "failed_fetch",
       "error_class": "graph_504_or_other"
     },
     {
-      "notebook": "3 Resources",
+      "notebook": "<resource-notebook>",
       "section": "Encrypted private section",
       "title": null,
       "status": "failed_section_pages",
